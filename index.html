@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src ="index.js"></script>
+</head>
+<body>
+    <div id="outer">
+        <div id="inner">
+          <button id="button">Click me</button>
+        </div>
+      </div>
+      <input type="text" id="myInput" name="username" value="John" />
+
+      <script>
+        const inputElement = document.getElementById('myInput');
+        console.log(inputElement.value); // Outputs: "John"
+        inputElement.value = 8; // Modifying the property
+        document.getElementById('button').addEventListener('click', function () {
+          console.log('Button clicked');
+        });
+      
+        document.getElementById('inner').addEventListener('click', function () {
+          console.log('Inner div clicked');
+        });
+      
+        document.getElementById('outer').addEventListener('click', function () {
+          console.log('Outer div clicked');
+        });
+      </script>
+</body>
+</html>
